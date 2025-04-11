@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Slider : MonoBehaviour
 {
-    Slider sliderX;
-    Slider sliderY;
+    public Slider sliderX;
+    public Slider sliderY;
     public float valueX;
     public float valueY;
 

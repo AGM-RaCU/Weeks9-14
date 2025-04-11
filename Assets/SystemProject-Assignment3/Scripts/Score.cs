@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Score : MonoBehaviour
 {
     public float scoreCount;
-    GameObject Particles;
+    public GameObject Particles;
 
     void Start()
     {
