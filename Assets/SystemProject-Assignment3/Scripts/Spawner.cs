@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Spawner : MonoBehaviour
 {
     GameObject Marker;
+    public float scoreValue;
+    public float shotsTaken;
 
     void Start()
     {
