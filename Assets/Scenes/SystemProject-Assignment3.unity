@@ -344,6 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca78d73943b4dd8468da0c31d28addcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreCount: 0
+  Particles: {fileID: 0}
 --- !u!1 &190542457
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e26a043c03962c47bfe5f610bc3d9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderX: {fileID: 0}
+  sliderY: {fileID: 0}
   valueX: 0
   valueY: 0
 --- !u!1 &960559881
@@ -5944,6 +5948,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbdc1febdfef2bb49bfef574ccaf92c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Marker: {fileID: 1800729740}
+  scoreValue: 0
+  shotsTaken: 0
 --- !u!1 &1722246717
 GameObject:
   m_ObjectHideFlags: 0
@@ -6105,6 +6112,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bc1c919b32e65545a5887c424b3da77, type: 3}
+--- !u!1 &1800729740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3166824591055163434, guid: 3bc1c919b32e65545a5887c424b3da77, type: 3}
+  m_PrefabInstance: {fileID: 1800729739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850871629
 GameObject:
   m_ObjectHideFlags: 0
@@ -6217,7 +6229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 183, y: -30}
+  m_AnchoredPosition: {x: 280, y: -30}
   m_SizeDelta: {x: 120, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059258041
@@ -6283,6 +6295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e26a043c03962c47bfe5f610bc3d9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderX: {fileID: 0}
+  sliderY: {fileID: 0}
   valueX: 0
   valueY: 0
 --- !u!1 &2136533705
