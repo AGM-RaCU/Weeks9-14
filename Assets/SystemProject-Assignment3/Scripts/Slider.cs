@@ -12,8 +12,8 @@ public class Slider : MonoBehaviour
 
     void Start()
     {
-        float valueX = GetComponent<sliderX.value>();
-        float valueY = GetComponent<sliderY.value>();
+        valueX = GetComponent<Slider X.value>();
+        valueY = GetComponent<Slider Y.value>();
     }
 
     void Update()
