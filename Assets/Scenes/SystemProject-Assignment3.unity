@@ -813,7 +813,6 @@ GameObject:
   m_Component:
   - component: {fileID: 871223162}
   - component: {fileID: 871223163}
-  - component: {fileID: 871223164}
   m_Layer: 5
   m_Name: Slider X
   m_TagString: Untagged
@@ -894,22 +893,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &871223164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871223161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e26a043c03962c47bfe5f610bc3d9a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sliderX: {fileID: 0}
-  sliderY: {fileID: 0}
-  valueX: 0
-  valueY: 0
 --- !u!1 &960559881
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,6 +5845,7 @@ GameObject:
   - component: {fileID: 1620408242}
   - component: {fileID: 1620408241}
   - component: {fileID: 1620408243}
+  - component: {fileID: 1620408244}
   m_Layer: 0
   m_Name: board1
   m_TagString: Untagged
@@ -5951,6 +5935,22 @@ MonoBehaviour:
   Marker: {fileID: 1800729740}
   scoreValue: 0
   shotsTaken: 0
+--- !u!114 &1620408244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620408240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e26a043c03962c47bfe5f610bc3d9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderX: {fileID: 871223163}
+  sliderY: {fileID: 2059258041}
+  valueX: 0
+  valueY: 0
 --- !u!1 &1722246717
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,7 +6202,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2059258040}
   - component: {fileID: 2059258041}
-  - component: {fileID: 2059258042}
   m_Layer: 5
   m_Name: Slider Y
   m_TagString: Untagged
@@ -6283,22 +6282,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2059258042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059258039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e26a043c03962c47bfe5f610bc3d9a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sliderX: {fileID: 0}
-  sliderY: {fileID: 0}
-  valueX: 0
-  valueY: 0
 --- !u!1 &2136533705
 GameObject:
   m_ObjectHideFlags: 0
