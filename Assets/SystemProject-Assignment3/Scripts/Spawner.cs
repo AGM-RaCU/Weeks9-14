@@ -12,8 +12,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        float valueX = GetComponent<SliderX.value>();
-        float valueY = GetComponent<SliderY.value>();
+      
     }
 
     void Update()
