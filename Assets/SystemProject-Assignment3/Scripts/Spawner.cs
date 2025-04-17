@@ -22,6 +22,8 @@ public class Spawner : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //Instantiate(Marker, valueX, valueY);
+            //SET SCORE
+            //UPDATE SCORE
         }
     }
 }

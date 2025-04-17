@@ -21,4 +21,9 @@ public class SliderMarker : MonoBehaviour
     {
     
     }
+
+    //VOID ON CLICK EVENT
+        //MARK X COORD
+        //MARK Y COORD
+        //DETERMINE SCORE INCREASE
 }
