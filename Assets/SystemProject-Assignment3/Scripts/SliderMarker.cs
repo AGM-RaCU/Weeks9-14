@@ -6,8 +6,8 @@ using UnityEngine.Events;
 
 public class SliderMarker : MonoBehaviour
 {
-    public Slider sliderX;
-    public Slider sliderY;
+    public Slider sliderX; //SLIDER X OBJECT VARIABLE
+    public Slider sliderY; //SLIDER Y OBJECT VARIABLE
     //public float valueX;
     //public float valueY;
 
@@ -15,19 +15,19 @@ public class SliderMarker : MonoBehaviour
     {
         //valueX = sliderX.value;
         //valueY = sliderY.value;
-        Debug.Log("Programa Empieza");
+        Debug.Log("Programa Empieza"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING START
     }
 
     void Update()
     {
-        sliderX.value += 0.3f;
-        sliderY.value += 0.3f;
-        Debug.Log("MarkerUpdate" +" "+ Time.deltaTime +" "+ sliderX.value + " " + sliderY.value);
-
+        sliderX.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER X
+        sliderY.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER Y
+        Debug.Log("MarkerUpdate" +" "+ Time.deltaTime +" "+ sliderX.value + " " + sliderY.value); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE, AS WELL AS DELTA TIME AND MY SLIDER VALUES
+        //IF STATEMENTS TO MAKE THE SLIDER VALUES NEGATIVE
     }
 
     //VOID ON CLICK EVENT
         //MARK X COORD
         //MARK Y COORD
-        //DETERMINE SCORE INCREASE
+        //DETERMINE SCORE INCREASE //IF STATEMENTS THAT STATE HOW MUCH THE SCORE INCREASES DEPENDING ON THE SLIDER VALUES ("X & Y CO-ORDINATES")
 }

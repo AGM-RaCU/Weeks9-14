@@ -6,19 +6,19 @@ using UnityEngine.Events;
 
 public class Score : MonoBehaviour
 {
-    public float scoreCount;
-    public GameObject Particles;
+    public float scoreCount; //PLAYER SCORE COUNT VARIABLE
+    public GameObject Particles; //PARTICLE OBJECT FOR THE CONFETTI
 
     void Start()
     {
         //DISPLAY SCORE COUNT 
-        Debug.Log("ScoreScript");
+        Debug.Log("ScoreScript"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING START
     }
 
     void Update()
     {
         //UPDATE SCORE COUNT
-        //Debug.Log("ScoreUpdate");
+        //Debug.Log("ScoreUpdate"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE
     }
 
     //VOID ON CLICK EVENT - SPAWN CONFETTI COROUTINE
