@@ -23,15 +23,15 @@ public class SliderMarker : MonoBehaviour
 
     void Update()
     {
-        if (sliderX.value < 8 & sliderY.value < 8) //IF STATEMENTS TO MAKE THE SLIDER VALUES POSITIVE
+        if (sliderX.value < 8 & sliderY.value > 0) //IF STATEMENTS TO MAKE THE SLIDER VALUES POSITIVE
         {
             sliderX.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER X
-            sliderY.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER Y
+            sliderY.value += -0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER Y
         }
-        else if (sliderX.value >= 8 & sliderY.value >= 8) //IF STATEMENTS TO MAKE THE SLIDER VALUES NEGATIVE
+        else if (sliderX.value >= 8 & sliderY.value <= 0) //IF STATEMENTS TO MAKE THE SLIDER VALUES NEGATIVE
         {
-            sliderX.value += -0.3f; //DECREASE RATE FOR THE VALUE OF SLIDER X
-            sliderY.value += -0.3f; //DECREASE RATE FOR THE VALUE OF SLIDER Y
+            sliderX.value = 0.0f; //DECREASE RATE FOR THE VALUE OF SLIDER X
+            sliderY.value = 8.0f; //DECREASE RATE FOR THE VALUE OF SLIDER Y
         }
         //markerMovement = MarkerMovement();
         //StartCoroutine(markerMovement);
