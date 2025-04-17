@@ -13,17 +13,18 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-      
+        Debug.Log("SpawnerScript");
     }
 
     void Update()
     {
-     
+        //Debug.Log("SpawnerUpdate");
         if (Input.GetMouseButtonDown(0))
         {
             //Instantiate(Marker, valueX, valueY);
             //SET SCORE
             //UPDATE SCORE
+            Debug.Log("Mouse");
         }
     }
 }

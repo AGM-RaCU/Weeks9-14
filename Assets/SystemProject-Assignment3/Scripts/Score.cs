@@ -11,12 +11,14 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-       //DISPLAY SCORE COUNT 
+        //DISPLAY SCORE COUNT 
+        Debug.Log("ScoreScript");
     }
 
     void Update()
     {
         //UPDATE SCORE COUNT
+        //Debug.Log("ScoreUpdate");
     }
 
     //VOID ON CLICK EVENT - SPAWN CONFETTI COROUTINE

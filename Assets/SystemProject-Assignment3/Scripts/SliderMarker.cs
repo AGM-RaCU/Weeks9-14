@@ -15,11 +15,12 @@ public class SliderMarker : MonoBehaviour
     {
         valueX = sliderX.value;
         valueY = sliderY.value;
+        Debug.Log("Programa Empieza");
     }
 
     void Update()
     {
-    
+        //Debug.Log("MarkerUpdate");
     }
 
     //VOID ON CLICK EVENT
