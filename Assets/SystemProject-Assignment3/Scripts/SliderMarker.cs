@@ -16,6 +16,8 @@ public class SliderMarker : MonoBehaviour
     {
         //valueX = sliderX.value;
         //valueY = sliderY.value;
+        sliderX.value = 4.0f;
+        sliderY.value = 4.0f;
         Debug.Log("Programa Empieza"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING START
     }
 
