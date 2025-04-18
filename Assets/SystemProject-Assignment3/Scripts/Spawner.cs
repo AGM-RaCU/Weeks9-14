@@ -49,31 +49,31 @@ public class Spawner : MonoBehaviour
         {
 
         }
-        else if (1 < sliderX.value <= 2 & 7 > sliderY.value >= 6)
+        else if (1 < sliderX.value <= 2 & 7 > sliderY.value => 6)
         {
 
         }
-        else if (2 < sliderX.value <= 3 & 6 > sliderY.value >= 5)
+        else if (2 < sliderX.value <= 3 & 6 > sliderY.value => 5)
         {
 
         }
-        else if (3 < sliderX.value <= 4 & 5 > sliderY.value >= 4)
+        else if (3 < sliderX.value <= 4 & 5 > sliderY.value => 4)
         {
 
         }
-        else if (4 < sliderX.value <= 5 & 4 > sliderY.value >= 3)
+        else if (4 < sliderX.value <= 5 & 4 > sliderY.value => 3)
         {
 
         }
-        else if (5 < sliderX.value <= 6 & 3 > sliderY.value >= 2)
+        else if (5 < sliderX.value <= 6 & 3 > sliderY.value => 2)
         {
 
         }
-        else if (6 < sliderX.value <= 7 & 2 > sliderY.value >= 1)
+        else if (6 < sliderX.value <= 7 & 2 > sliderY.value => 1)
         {
 
         }
-        else if (7 < sliderX.value <= 8 & 1 > sliderY.value >= 0)
+        else if (7 < sliderX.value <= 8 & 1 > sliderY.value => 0)
         {
 
         }
