@@ -11,15 +11,20 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        //DISPLAY SCORE COUNT 
+        //DISPLAY SCORE COUNT [[[[[[[[[[[[[[[[[
         Debug.Log("ScoreScript"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING START
     }
 
     void Update()
     {
-        //UPDATE SCORE COUNT
-        //Debug.Log("ScoreUpdate"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE
+        //UPDATE SCORE COUNT[[[[[[[[[[[[[
+        Debug.Log("ScoreUpdate"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE
     }
 
-    //VOID ON CLICK EVENT - SPAWN CONFETTI COROUTINE
+    public void Confetti()
+    {
+        //SPAWN CONFETTI COROUTINE[[[[[[[[[[
+        Debug.Log("Confetti"); //DEBUG LOG TO SHOW ME IF THIS SCRIPT IS BEING READ
+    }
+    
 }

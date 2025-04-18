@@ -8,16 +8,13 @@ public class SliderMarker : MonoBehaviour
 {
     public Slider sliderX; //SLIDER X OBJECT VARIABLE
     public Slider sliderY; //SLIDER Y OBJECT VARIABLE
-    //private IEnumerator markerMovement;
-    //public float valueX;
-    //public float valueY;
+   
 
     void Start()
     {
-        //valueX = sliderX.value;
-        //valueY = sliderY.value;
-        sliderX.value = 4.0f;
-        sliderY.value = 4.0f;
+     
+        sliderX.value = 4.0f; //STARTING THE X SLIDER IN THE MIDDLE
+        sliderY.value = 4.0f; //STARTING THE Y SLIDER IN THE MIDDLE
         Debug.Log("Programa Empieza"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING START
     }
 
@@ -25,36 +22,29 @@ public class SliderMarker : MonoBehaviour
     {
         if (sliderX.value < 8 & sliderY.value > 0) //IF STATEMENTS TO MAKE THE SLIDER VALUES POSITIVE
         {
-            sliderX.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER X
-            sliderY.value += -0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER Y
+            sliderX.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER X SO IT GOES RIGHT
+            sliderY.value += -0.3f; //DECREASE RATE FOR THE VALUE OF SLIDER Y SO IT GOES DOWN
         }
         else if (sliderX.value >= 8 & sliderY.value <= 0) //IF STATEMENTS TO MAKE THE SLIDER VALUES NEGATIVE
         {
-            sliderX.value = 0.0f; //DECREASE RATE FOR THE VALUE OF SLIDER X
-            sliderY.value = 8.0f; //DECREASE RATE FOR THE VALUE OF SLIDER Y
+            sliderX.value = 0.0f; //RESET THE VALUE OF SLIDER X
+            sliderY.value = 8.0f; //RESET THE VALUE OF SLIDER Y
         }
-        //markerMovement = MarkerMovement();
-        //StartCoroutine(markerMovement);
+     
 
-        Debug.Log("MarkerUpdate" + " " + Time.deltaTime + " " + sliderX.value + " " + sliderY.value); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE, AS WELL AS DELTA TIME AND MY SLIDER VALUES
+       Debug.Log("MarkerUpdate"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE, AS WELL AS DELTA TIME AND MY SLIDER VALUES
     }
 
-    //VOID ON CLICK EVENT
-        //MARK X COORD
-        //MARK Y COORD
-        //DETERMINE SCORE INCREASE //IF STATEMENTS THAT STATE HOW MUCH THE SCORE INCREASES DEPENDING ON THE SLIDER VALUES ("X & Y CO-ORDINATES")
+    public void ShootArrow()
+    {
+        if (0 < sliderX.value <= 1 & 8 > sliderY.value >= 7)
+        {
 
-//private IEnumerator MarkerMovement()
-//    {
-//        if (sliderX.value < 8 & sliderY.value < 8) //IF STATEMENTS TO MAKE THE SLIDER VALUES POSITIVE
-//        {
-//            sliderX.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER X
-//            sliderY.value += 0.3f; //INCREASE RATE FOR THE VALUE OF SLIDER Y
-//        }
-//        else if (sliderX.value >= 8 & sliderY.value >= 8) //IF STATEMENTS TO MAKE THE SLIDER VALUES NEGATIVE
-//        {
-//            sliderX.value += -0.3f; //DECREASE RATE FOR THE VALUE OF SLIDER X
-//            sliderY.value += -0.3f; //DECREASE RATE FOR THE VALUE OF SLIDER Y
-//        }
-//    }
+        }
+        //MARK X COORD[[[[[[[[[[[[[[[[
+        //MARK Y COORD[[[[[[[[[[[[[[[[
+        //DETERMINE SCORE INCREASE //IF STATEMENTS THAT STATE HOW MUCH THE SCORE INCREASES DEPENDING ON THE SLIDER VALUES ("X & Y CO-ORDINATES")[[[[[[[[[[[[[[[
+    }
+
+
 }
