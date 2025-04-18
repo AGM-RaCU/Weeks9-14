@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SCORE
+  m_text: '"SCORE" + scoreCount'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCount: 0
-  Particles: {fileID: 0}
+  Particles: {fileID: 960559881}
 --- !u!1 &190542457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,6 +5935,11 @@ MonoBehaviour:
   Marker: {fileID: 1800729740}
   scoreValue: 0
   shotsTaken: 0
+  valueX: 0
+  valueY: 0
+  arrowShot:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1620408244
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,19 +11,20 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        //DISPLAY SCORE COUNT [[[[[[[[[[[[[[[[[
+        
         Debug.Log("ScoreScript"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING START
     }
 
     void Update()
     {
-        //UPDATE SCORE COUNT[[[[[[[[[[[[[
+        scoreCount = GetComponent<board1.Spawner.playerScore>() //UPDATE SCORE COUNT
         Debug.Log("ScoreUpdate"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE
     }
 
     public void Confetti()
     {
-        //SPAWN CONFETTI COROUTINE[[[[[[[[[[
+        private IEnumerator confetti; //SPAWN CONFETTI COROUTINE
+    GetComponent<Confetti>(); //CONFETTI PREFAB
         Debug.Log("Confetti"); //DEBUG LOG TO SHOW ME IF THIS SCRIPT IS BEING READ
     }
     

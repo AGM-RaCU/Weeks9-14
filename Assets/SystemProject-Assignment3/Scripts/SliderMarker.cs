@@ -35,16 +35,6 @@ public class SliderMarker : MonoBehaviour
        Debug.Log("MarkerUpdate"); //DEBUG LOG TO SHOW ME WHEN THIS SCRIPT HAPPENS DURING UPDATE, AS WELL AS DELTA TIME AND MY SLIDER VALUES
     }
 
-    public void ShootArrow()
-    {
-        if (0 < sliderX.value <= 1 & 8 > sliderY.value >= 7)
-        {
-
-        }
-        //MARK X COORD[[[[[[[[[[[[[[[[
-        //MARK Y COORD[[[[[[[[[[[[[[[[
-        //DETERMINE SCORE INCREASE //IF STATEMENTS THAT STATE HOW MUCH THE SCORE INCREASES DEPENDING ON THE SLIDER VALUES ("X & Y CO-ORDINATES")[[[[[[[[[[[[[[[
-    }
 
 
 }
