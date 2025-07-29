@@ -349,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexagonPrefab: {fileID: 1510282733756296350, guid: 9f96585457abcd84fa1253c2a7c71674, type: 3}
   hexagonColourizerButton: {fileID: 1442267248}
+  hexagonCounter: {fileID: 995520651}
 --- !u!4 &647250768
 Transform:
   m_ObjectHideFlags: 0
@@ -508,6 +509,7 @@ GameObject:
   - component: {fileID: 717739833}
   - component: {fileID: 717739835}
   - component: {fileID: 717739834}
+  - component: {fileID: 717739836}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -631,6 +633,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717739832}
   m_CullTransparentMesh: 1
+--- !u!114 &717739836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717739832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41e2831399e4084e950e568b6c0d7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterText: {fileID: 0}
+--- !u!1 &995520650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 995520652}
+  - component: {fileID: 995520651}
+  m_Layer: 0
+  m_Name: HexagonCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &995520651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995520650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41e2831399e4084e950e568b6c0d7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterText: {fileID: 717739834}
+--- !u!4 &995520652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995520650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.27363634, y: -0.26754418, z: 0.07963008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071453199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hexagon
       objectReference: {fileID: 0}
+    - target: {fileID: 6550652638530441059, guid: 9f96585457abcd84fa1253c2a7c71674, type: 3}
+      propertyPath: counterText
+      value: 
+      objectReference: {fileID: 717739834}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1717,3 +1781,4 @@ SceneRoots:
   - {fileID: 647250768}
   - {fileID: 53243913}
   - {fileID: 2093782971}
+  - {fileID: 995520652}
