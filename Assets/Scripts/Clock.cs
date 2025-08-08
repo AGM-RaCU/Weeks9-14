@@ -58,7 +58,7 @@ public class Clock : MonoBehaviour
             yield return StartCoroutine(activeHandsCoroutine);
         }
 
-        Debug.Log("We've finished ClockUpdate coroutine");
+        //Debug.Log("We've finished ClockUpdate coroutine");
     }
 
     IEnumerator MoveHandsAnHour()
