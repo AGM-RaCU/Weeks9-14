@@ -1,13 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class TrafficLightController : MonoBehaviour
+public class TrafficLight : MonoBehaviour
 {
     private SpriteRenderer trafficLightRenderer;
-    public UnityEvent lightGo;
-    public UnityEvent lightStop;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +15,18 @@ public class TrafficLightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            lightGo.Invoke();
-        }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            lightStop.Invoke();
-        }
+
+
     }
 
+    public void Go()
+    {
+            trafficLightRenderer.color = Color.green;
+    }
+
+    public void Stop()
+    {
+            trafficLightRenderer.color = Color.red;
+    }
 }
