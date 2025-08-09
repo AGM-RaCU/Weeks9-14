@@ -5,14 +5,13 @@ using UnityEngine.Events;
 
 public class TrafficLightController : MonoBehaviour
 {
-    private SpriteRenderer trafficLightRenderer;
     public UnityEvent lightGo;
     public UnityEvent lightStop;
 
     // Start is called before the first frame update
     void Start()
     {
-        trafficLightRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
