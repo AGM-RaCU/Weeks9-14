@@ -6,29 +6,31 @@ using TMPro;
 
 public class NachoManager : MonoBehaviour
 {
-    static public NachoManager Instance;
+    static public NachoManager Instance; //easy access to this script and its info for other scripts
 
-    public TextMeshProUGUI scoreText;
-    public float fadeTime = 1f;
-    private float fadeTimer = 0;
+    public TextMeshProUGUI scoreText; //the text used to tell the player how well they made their nachos
+    public float fadeTime = 1f; //time for text to fade away
 
-    public GameObject TrayPrefab;
-    public GameObject activeTray;
+    private float fadeTimer = 0; //timer used for fading text away
 
-    public Transform traySpawn;
+    public GameObject TrayPrefab; //prefab of trays
 
-    public UnityEvent OnTrayFinished;
+    public GameObject activeTray; //currently active tray
+
+    public Transform traySpawn; //spawn location of trays
+
+    public UnityEvent OnTrayFinished; //event called when the player sends the active tray offscreen
 
     private void Awake()
     {
-        Instance = this;
+        Instance = this; //easy access to this instance of the script and its info for other scripts
     }
 
-    public void FinishTray()
+    public void FinishTray() //called via button when the player wants to send active tray offscreen
     {
         int cheeseCount = 0;
         int nachoCount = 0;
-        foreach (GameObject food in activeTray.GetComponent<NachoTray>().foodItems)
+        foreach (GameObject food in activeTray.GetComponent<NachoTray>().foodItems) //sum up the cheese and nachos
         {
             if (food.GetComponent<FoodItem>().foodType == FoodItem.FoodType.cheese)
             {
@@ -45,7 +47,7 @@ public class NachoManager : MonoBehaviour
             nachoCount = 1000;
             cheeseCount = 1;
         }
-        float nachoRatio = nachoCount / cheeseCount;
+        float nachoRatio = nachoCount / cheeseCount; //get the ratio of nacho to cheese, then give a rating based on said ratio
         if (nachoRatio == 1)
         {
             scoreText.text = "Perfect!!";
@@ -62,19 +64,18 @@ public class NachoManager : MonoBehaviour
         {
             scoreText.text = "Yum!";
         }
-        StartCoroutine(NachoTextFade());
-        OnTrayFinished.Invoke();
-        activeTray = Instantiate(TrayPrefab, traySpawn.position, Quaternion.identity);
+        StartCoroutine(NachoTextFade()); //fade the score text away over time
+        OnTrayFinished.Invoke(); //call tray finish event to send tray offscreen
+        activeTray = Instantiate(TrayPrefab, traySpawn.position, Quaternion.identity); //create new tray
     }
 
-    IEnumerator NachoTextFade()
+    IEnumerator NachoTextFade() //used to fade score text away
     {
         fadeTimer = 0;
-        scoreText.color = new Color(0, 0, 0, 255);
-        while (scoreText.color.a > 0)
+        scoreText.color = new Color(0, 0, 0, 255); //set text as visible 
+        while (scoreText.color.a > 0) //slowly fade until text is fully transparent
         {
             fadeTimer += Time.deltaTime;
-            Debug.Log("fading");
             scoreText.color = Color.Lerp(Color.black, new Color(0, 0, 0, 0), fadeTimer / fadeTime);
             yield return null;
         }

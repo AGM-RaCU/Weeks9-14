@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class NachoTray : MonoBehaviour
 {
-    public List<GameObject> foodItems = new List<GameObject>();
-    public float leavingSpeed = 20f;
-    public float enterSpeed = 5f;
-    public float startHeight;
+    public List<GameObject> foodItems = new List<GameObject>(); //list of food items on this tray
+    public float leavingSpeed = 20f; //speed of leaving the scene
+    public float enterSpeed = 5f; //speed of entering from below
+    public float startHeight; //height above the spawn location the tray moves to
     // Start is called before the first frame update
     void Start()
     {
-        NachoManager.Instance.OnTrayFinished.AddListener(CallLeaveScene);
-        StartCoroutine(EnterScene());
+        NachoManager.Instance.OnTrayFinished.AddListener(CallLeaveScene); //when the tray is finished, leave the scene
+        StartCoroutine(EnterScene()); //used to move tray into view from offscreen
     }
     public IEnumerator LeaveScene()
     {
-        while (transform.position.x < 12)
+        while (transform.position.x < 12) //move offscreen right
         {
             transform.position += Vector3.right * Time.deltaTime * leavingSpeed;
             yield return null;
         }
-        Destroy(gameObject);
+        Destroy(gameObject); //when offscreen, destroy this
     }
 
-    public IEnumerator EnterScene()
+    public IEnumerator EnterScene() //move onscreen from below
     {
         while (transform.position.y < startHeight)
         {
@@ -33,9 +33,9 @@ public class NachoTray : MonoBehaviour
         }
     }
 
-    public void CallLeaveScene()
+    public void CallLeaveScene()  //called on the unity event in NachoManager which is activated when a button is pressed to send the tray offscreen
     {
         StartCoroutine(LeaveScene());
-        NachoManager.Instance.OnTrayFinished.RemoveListener(CallLeaveScene);
+        NachoManager.Instance.OnTrayFinished.RemoveListener(CallLeaveScene); //in case the button gets spammed
     }
 }
