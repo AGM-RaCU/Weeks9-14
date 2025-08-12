@@ -32,7 +32,7 @@ public class FoodItem : MonoBehaviour
             GameObject activeTray = NachoManager.Instance.activeTray; //get reference to active tray from nachomanager. we do this each frame in case active trays are changed while this item is falling
             if (activeTray != null) //null check to ensure we dont throw errors
             {
-                landed = (Mathf.Abs(transform.position.x - activeTray.transform.position.x) < activeTray.transform.localScale.x / 2) && (Mathf.Abs(transform.position.y - activeTray.transform.position.y) < activeTray.transform.localScale.y / 2); //if we are within range of the tray both in x and y axis, we have landed
+                landed = (Mathf.Abs(transform.position.x - activeTray.transform.position.x) < activeTray.GetComponent<NachoTray>().catchDistance.x) && (Mathf.Abs(transform.position.y - activeTray.transform.position.y) < activeTray.GetComponent<NachoTray>().catchDistance.y); //if we are within range of the tray both in x and y axis, we have landed
                 foreach (GameObject food in activeTray.GetComponent<NachoTray>().foodItems)
                 {
                     landed = landed || Vector3.Distance(transform.position, food.transform.position) < transform.localScale.x/2; //we can also count as having landed if we are near other food
@@ -44,7 +44,7 @@ public class FoodItem : MonoBehaviour
         if(activeTrayOnEnd != null) //quick null check in case we somehow grab it when it doesnt exist. 
         {
             activeTrayOnEnd.GetComponent<NachoTray>().foodItems.Add(gameObject); //add ourselves to the tray
-            transform.SetParent(activeTrayOnEnd.transform); //parent ourselves to the tray so we move offscreen with it later, and get the funky scaling effect on landing
+            transform.SetParent(activeTrayOnEnd.transform); //parent ourselves to the tray so we move offscreen with it later
         }
     }
 

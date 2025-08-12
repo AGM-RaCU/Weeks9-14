@@ -8,6 +8,7 @@ public class NachoTray : MonoBehaviour
     public float leavingSpeed = 20f; //speed of leaving the scene
     public float enterSpeed = 5f; //speed of entering from below
     public float startHeight; //height above the spawn location the tray moves to
+    public Vector2 catchDistance; //distance in x and y which the tray will catch food items at
     // Start is called before the first frame update
     void Start()
     {
