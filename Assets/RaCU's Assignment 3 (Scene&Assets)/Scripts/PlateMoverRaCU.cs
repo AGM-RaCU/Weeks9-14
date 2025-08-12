@@ -20,7 +20,12 @@ public class PlateMoverRaCU : MonoBehaviour
         
     }
 
-    public IEnumerator MovePlate()
+    public void buttonPressed()
+    {
+        StartCoroutine(movePlate());
+    }
+
+    public IEnumerator movePlate()
     {
         yield return null;
     }
