@@ -19,4 +19,9 @@ public class PlateMoverRaCU : MonoBehaviour
     {
         
     }
+
+    public IEnumerator MovePlate()
+    {
+        yield return null;
+    }
 }
