@@ -2,33 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class PlateMoverRaCU : MonoBehaviour
+namespace RaCU
 {
-    public GameObject spawner;
-    public GameObject plate;
-    public UnityEvent goButtonPressed;
-
-    // Start is called before the first frame update
-    void Start()
+    public class PlateMoverRaCU : MonoBehaviour
     {
-        
-    }
+        public GameObject spawner;
+        public GameObject plate;
+        public UnityEvent goButtonPressed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    public void buttonPressed()
-    {
-        StartCoroutine(movePlate());
-    }
+        }
 
-    public IEnumerator movePlate()
-    {
+        // Update is called once per frame
+        void Update()
+        {
 
-        yield return null;
+        }
+
+        public void buttonPressed()
+        {
+            StartCoroutine(movePlate());
+        }
+
+        public IEnumerator movePlate()
+        {
+
+            yield return null;
+        }
     }
 }

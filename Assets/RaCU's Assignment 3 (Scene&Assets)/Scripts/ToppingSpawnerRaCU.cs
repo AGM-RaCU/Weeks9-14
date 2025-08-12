@@ -1,55 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ToppingSpawnerRaCU : MonoBehaviour
+namespace RaCU
 {
-    public GameObject TomatoPrefab;
-    public GameObject OnionPrefab;
-    public GameObject LettucePrefab;
-    public GameObject CilantroPrefab;
-    public GameObject SaucePrefab;
-    public GameObject HotSaucePrefab;
-
-    // Start is called before the first frame update
-    void Start()
+    public class ToppingSpawnerRaCU : MonoBehaviour
     {
-        
-    }
+        public GameObject TomatoPrefab;
+        public GameObject OnionPrefab;
+        public GameObject LettucePrefab;
+        public GameObject CilantroPrefab;
+        public GameObject SaucePrefab;
+        public GameObject HotSaucePrefab;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    public void placeTomato()
-    {
-        Instantiate(TomatoPrefab);
-    }
+        }
 
-    public void placeOnion()
-    {
-        Instantiate(OnionPrefab);
-    }
+        // Update is called once per frame
+        void Update()
+        {
 
-    public void placeLettuce()
-    {
-        Instantiate(LettucePrefab);
-    }
+        }
 
-    public void placeCilantro()
-    {
-        Instantiate(CilantroPrefab);
-    }
+        public void placeTomato()
+        {
+            Instantiate(TomatoPrefab);
+        }
 
-    public void placeSauce()
-    {
-        Instantiate(SaucePrefab);
-    }
+        public void placeOnion()
+        {
+            Instantiate(OnionPrefab);
+        }
 
-    public void placeHotSauce()
-    {
-        Instantiate(HotSaucePrefab);
+        public void placeLettuce()
+        {
+            Instantiate(LettucePrefab);
+        }
+
+        public void placeCilantro()
+        {
+            Instantiate(CilantroPrefab);
+        }
+
+        public void placeSauce()
+        {
+            Instantiate(SaucePrefab);
+        }
+
+        public void placeHotSauce()
+        {
+            Instantiate(HotSaucePrefab);
+        }
     }
 }
