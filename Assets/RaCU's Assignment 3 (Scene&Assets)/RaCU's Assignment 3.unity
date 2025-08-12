@@ -338,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 478633024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750238845}
+        m_TargetAssemblyTypeName: ToppingSpawnerRaCU, Assembly-CSharp
+        m_MethodName: placeLettuce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &478633024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +471,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 597881008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750238845}
+        m_TargetAssemblyTypeName: ToppingSpawnerRaCU, Assembly-CSharp
+        m_MethodName: placeHotSauce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &597881008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858913927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750238845}
+        m_TargetAssemblyTypeName: ToppingSpawnerRaCU, Assembly-CSharp
+        m_MethodName: placeTomato
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &858913927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,7 +871,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892719222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750238845}
+        m_TargetAssemblyTypeName: ToppingSpawnerRaCU, Assembly-CSharp
+        m_MethodName: placeOnion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892719222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,7 +1351,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1167805931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750238845}
+        m_TargetAssemblyTypeName: ToppingSpawnerRaCU, Assembly-CSharp
+        m_MethodName: placeCilantro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1167805931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,7 +1820,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521419047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750238845}
+        m_TargetAssemblyTypeName: ToppingSpawnerRaCU, Assembly-CSharp
+        m_MethodName: placeSauce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1521419047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1808,6 +1880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1750238844}
+  - component: {fileID: 1750238845}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1830,6 +1903,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1750238845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750238843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596e538b20613cf42be67825ae66519a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TomatoPrefab: {fileID: 3969396257441531563, guid: a6bfe39389010524d8200a071150798a, type: 3}
+  OnionPrefab: {fileID: 4854477089651475757, guid: 7374ee6fe1ad03e44871ba8c357a9912, type: 3}
+  LettucePrefab: {fileID: 4458739078434379401, guid: fc79acb288052be40947d7cab2206dc8, type: 3}
+  CilantroPrefab: {fileID: 5721435872401823850, guid: a0cfe9fa590113a4a86be8be5dbe8014, type: 3}
+  SaucePrefab: {fileID: 2127706397509672249, guid: 5608918d35acd784da1a7f04126f8758, type: 3}
+  HotSaucePrefab: {fileID: 3372547080095221998, guid: 7e1e5a60be093e947821b112a87dbfd8, type: 3}
 --- !u!1 &1876111624
 GameObject:
   m_ObjectHideFlags: 0
