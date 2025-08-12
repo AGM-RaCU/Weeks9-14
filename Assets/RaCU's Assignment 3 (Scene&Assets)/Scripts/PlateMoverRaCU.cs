@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class PlateMoverRaCU : MonoBehaviour
 {
-
+    public GameObject spawner;
+    public GameObject plate;
     public UnityEvent goButtonPressed;
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class PlateMoverRaCU : MonoBehaviour
 
     public IEnumerator movePlate()
     {
+
         yield return null;
     }
 }
