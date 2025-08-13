@@ -829,6 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1750238843}
+  plate: {fileID: 1415736411}
   goButtonPressed:
     m_PersistentCalls:
       m_Calls: []
@@ -1112,6 +1113,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167805928}
   m_CullTransparentMesh: 1
+--- !u!1 &1415736411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 569478311810889971, guid: 6f2ce9392f5f8e64d966eca4d9870d4e, type: 3}
+  m_PrefabInstance: {fileID: 349714357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1425575263
 GameObject:
   m_ObjectHideFlags: 0

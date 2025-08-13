@@ -25,11 +25,15 @@ namespace RaCU
         public void buttonPressed()
         {
             StartCoroutine(movePlate());
+            goButtonPressed.Invoke();
         }
 
         public IEnumerator movePlate()
         {
-
+            Vector3 platePosition = plate.transform.position + Vector3.down * Time.deltaTime; //vector3 defining how the plate will move down
+            plate.transform.position = platePosition; //applies vector3 to plate's transform position, plate moves
+            
+            Debug.Log("Coroutine started");
             yield return null;
         }
     }
