@@ -11,47 +11,47 @@ namespace RaCU
         public GameObject CilantroPrefab;
         public GameObject SaucePrefab;
         public GameObject HotSaucePrefab;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        public GameObject Plate;
 
         public void placeTomato()
         {
-            Instantiate(TomatoPrefab);
+            GameObject Tomato = Instantiate(TomatoPrefab);
+            Tomato.transform.parent = transform;
         }
 
         public void placeOnion()
         {
-            Instantiate(OnionPrefab);
+            GameObject Onion = Instantiate(OnionPrefab);
+            Onion.transform.parent = transform;
         }
 
         public void placeLettuce()
         {
-            Instantiate(LettucePrefab);
+            GameObject Lettuce = Instantiate(LettucePrefab);
+            Lettuce.transform.parent = transform;
         }
 
         public void placeCilantro()
         {
-            Instantiate(CilantroPrefab);
+            GameObject Cilantro = Instantiate(CilantroPrefab);
+            Cilantro.transform.parent = transform;
         }
 
         public void placeSauce()
         {
-            Instantiate(SaucePrefab);
+            GameObject Sauce = Instantiate(SaucePrefab);
+            Sauce.transform.parent = transform;
         }
 
         public void placeHotSauce()
         {
-            Instantiate(HotSaucePrefab);
+            GameObject HotSauce = Instantiate(HotSaucePrefab);
+            HotSauce.transform.parent = transform;
+        }
+
+        public void plateConnect()
+        {
+            transform.position = Plate.transform.position;
         }
     }
 }

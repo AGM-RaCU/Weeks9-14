@@ -7,20 +7,7 @@ namespace RaCU
     public class PlateMoverRaCU : MonoBehaviour
     {
         public GameObject spawner;
-        public GameObject plate;
         public UnityEvent goButtonPressed;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         public void buttonPressed()
         {
@@ -30,11 +17,11 @@ namespace RaCU
 
         public IEnumerator movePlate()
         {
-            Vector3 platePosition = plate.transform.position + Vector3.down * Time.deltaTime; //vector3 defining how the plate will move down
-            plate.transform.position = platePosition; //applies vector3 to plate's transform position, plate moves
-            
-            Debug.Log("Coroutine started");
+            Vector3 platePosition = transform.position + Vector3.down * 5f; //vector3 defining how the plate will move down
+            transform.position = platePosition; //applies vector3 to plate's transform position, plate moves
             yield return null;
+            Debug.Log("Coroutine started");
+            
         }
     }
 }
