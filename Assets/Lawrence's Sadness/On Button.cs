@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OnButton : MonoBehaviour
 {
+    bool electricty = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,17 @@ public class OnButton : MonoBehaviour
     void Update()
     {
         
+    }
+    public void OnClickOnPower()
+    {
+        if (electricty == false)
+        {
+            electricty = true;
+        }
+        else if (electricty == true)
+        {
+            electricty = false;
+        }
+
     }
 }
