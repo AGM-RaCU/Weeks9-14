@@ -169,7 +169,6 @@ GameObject:
   m_Component:
   - component: {fileID: 66224125}
   - component: {fileID: 66224126}
-  - component: {fileID: 66224128}
   - component: {fileID: 66224127}
   m_Layer: 0
   m_Name: Off Button
@@ -257,19 +256,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8118e8efaa545724b8a4e482a7e4c55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &66224128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66224124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
+  OnOvenTurnedOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1472573958}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &93821004
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +525,7 @@ Transform:
   m_GameObject: {fileID: 249712509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2543,7 +2544,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1627731459}
   - component: {fileID: 1627731460}
-  - component: {fileID: 1627731461}
   - component: {fileID: 1627731462}
   m_Layer: 0
   m_Name: On Button
@@ -2619,19 +2619,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1627731461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627731458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
 --- !u!114 &1627731462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2644,6 +2631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed9393fad2657a4597ae836306aa626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnOvenTurnedOn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1644964832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,6 +3467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   electricty: 0
+  time: 0
+  running: 0
 --- !u!1 &2132704696
 GameObject:
   m_ObjectHideFlags: 0
