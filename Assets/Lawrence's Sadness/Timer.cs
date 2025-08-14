@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour
             //slider is being updated between 0 - 1
             timeSlider.value = time/maxTime;
 
-            if(time > 0.4f)
+            if(time > 40f)
             {
                 //FIRE THE EVENT
                 Melt.Invoke();
@@ -59,7 +59,7 @@ public class Timer : MonoBehaviour
             //if you're at 30%
             //fire an event
 
-            if(time > 0.6f)
+            if(time > 60f)
             {
                 Burn.Invoke();
             }
