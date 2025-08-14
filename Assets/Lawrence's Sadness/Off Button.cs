@@ -7,7 +7,9 @@ using UnityEngine.Playables;
 
 public class OffButton : MonoBehaviour
 {
+    //bool to determine if button is being powered
     bool electricty = false;
+    //Unity Event for button functionality
     public UnityEvent OnOvenTurnedOff;
 
     // Start is called before the first frame update
@@ -32,6 +34,7 @@ public class OffButton : MonoBehaviour
             //if the distance is less than the radius and the mouse is being clicked
             if (Distance <=0.5 && Input.GetMouseButtonDown(0))
             {
+                //Inviokes the Event that Stops the Oven Coroutin
                 OnOvenTurnedOff.Invoke();
             }
                 //TRIGGER THE EVENT
@@ -39,6 +42,7 @@ public class OffButton : MonoBehaviour
     }
     public void OnClickOffPower()
     {
+        //switches between electricty is one and off
         if (electricty == false)
         {
             electricty = true;
