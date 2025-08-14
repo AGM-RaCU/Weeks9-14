@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 public class Timer : MonoBehaviour
 {
     public bool electricty = false;
-    public float time;
     Coroutine clockRoutine;
     public bool running = false;
+
+    public UnityEvent Melt;
+    public UnityEvent Burn;
+
+    //Slider variables
+    public Slider timeSlider;
+    public float maxTime = 100f;
+    public float time = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,19 +47,21 @@ public class Timer : MonoBehaviour
         {
             //Have a timer
             //timer increases
-
+            time += Time.deltaTime;
             //slider is being updated between 0 - 1
+            timeSlider.value = time/maxTime;
 
-            if(time > 3)
+            if(time > 0.4f)
             {
                 //FIRE THE EVENT
+                Melt.Invoke();
             }
             //if you're at 30%
             //fire an event
 
-            if(time > 6)
+            if(time > 0.6f)
             {
-
+                Burn.Invoke();
             }
             //if you're at 60%
             //fire a different event
@@ -66,6 +78,7 @@ public class Timer : MonoBehaviour
         {
             clockRoutine = StartCoroutine(Clock());
             running = true;
+            Debug.Log("turned on");
         }
     }
     public void OnClickStop()

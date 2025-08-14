@@ -5,10 +5,16 @@ using UnityEngine.Events;
 
 public class OnButton : MonoBehaviour
 {
-    bool electricty = false;
+    public bool electricty = false;
     public UnityEvent OnOvenTurnedOn;
     // Start is called before the first frame update
     void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (electricty == true)
         {
@@ -19,20 +25,14 @@ public class OnButton : MonoBehaviour
             //Figure out how far the mouse is from the button's center
             float Distance = Vector3.Distance(mousePostion, transform.position);
 
-
             //if the distance is less than the radius and the mouse is being clicked
             if (Distance <= 0.5 && Input.GetMouseButtonDown(0))
             {
                 OnOvenTurnedOn.Invoke();
+                Debug.Log("hello world");
             }
             //TRIGGER THE EVENT
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void OnClickOnPower()
     {
